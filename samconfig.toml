@@ -1,0 +1,8 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "hello-world-stackplayground"
+resolve_s3 = true
+s3_prefix = "hello-world-stackplayground"
+region = "eu-west-1"
+capabilities = "CAPABILITY_IAM"
+image_repositories = []

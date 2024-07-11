@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  hello-world-stackplayground
+  hello-world-shade
 Transform:
   - AWS::Serverless-2016-10-31
 
@@ -17,6 +17,12 @@ Resources:
       MemorySize: 512
       Timeout: 100
       Description: A simple hello world program that puts at item into a dynamo table
+      Events:
+        HelloWorld:
+          Type: Api
+          Properties:
+            Method: GET
+            Path: /
       Policies:
         - Version: '2012-10-17'
           Statement:
